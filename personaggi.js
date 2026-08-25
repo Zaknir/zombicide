@@ -32,6 +32,8 @@ class PersonaggioOverview extends HTMLElement {
     this.innerHTML = `
     <section>
       <h1>${p.nome}, Anteprima</h1>
+    </section>
+    <section>
       <p>${p.descrizione}</p>
     </section>
     <section>
