@@ -30,8 +30,11 @@ class PersonaggioOverview extends HTMLElement {
     }
 
     this.innerHTML = `
+    <section>
       <h1>${p.nome}, Anteprima</h1>
       <p>${p.descrizione}</p>
+    </section>
+    <section>
       ${p.livelli.map(l => `
         <h2>${l.livello}</h2>
         ${l.sceltaMultipla ? `<p>Abilità: ${TESTO_SCELTA_MULTIPLA}</p>` : `<p>Abilità: </p>`}
@@ -44,6 +47,7 @@ class PersonaggioOverview extends HTMLElement {
       <ul>
         <a href="${p.nome}_card.html">Scegli di giocare con ${p.nome}</a>
       </ul>
+    </section>
     `;
   }
 }
