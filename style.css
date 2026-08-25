@@ -1,0 +1,211 @@
+body{
+  background-color: #DBCFE2; /* Colore di sfondo */
+  margin: 0;
+  padding: 0px;
+  margin:auto;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #424464;          /* Colore del testo */
+  font-size: 18px;            /* Dimensione consigliata tra 16px e 20px */
+  line-height: 1.5;           /* Interlinea ampia */
+  letter-spacing: 0.12em;     /* Spazio tra lettere */
+  word-spacing: 0.16em;       /* Spazio tra parole */
+  text-align: left;           /* MAI giustificato */
+  margin-bottom: 2em;         /* Spazio tra paragrafi */
+  max-width: 70ch;            /* Righe non troppo lunghe (max 70 caratteri) */
+}
+
+header, section, footer {
+  background-color:antiquewhite;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 15px;
+  border: 1px solid #424464; /* Bordo scuro per contrastare con lo sfondo chiaro */
+}
+
+/* header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Serve a farlo stare sopra agli altri elementi
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Di base le tendine sono nascoste */
+.tendina {
+    display: none;
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f4ebd9; /* Il tuo colore pergamena */
+    border: 1px solid #424464; /* Bordo scuro per contrastare con lo sfondo chiaro */
+}
+
+/* Mostra la tendina SOLO quando il bottone è cliccato (:focus) 
+   o quando la tastiera è attiva dentro la voce (:focus-within) */
+.voce-tendina:focus-within .tendina {
+    display: block;
+}
+
+/* Stile base per far sembrare il bottone un elemento del menù */
+.bottone-menu {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* 1. Forza le scritte (label) ad andare a capo e crea un po' di spazio sotto */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; /* Opzionale: rende le etichette più leggibili */
+}
+
+/* 2. Allarga i campi di testo al massimo della sezione e li manda a capo */
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+    display: block;
+    width: 100%; /* Occupa tutta la larghezza della section */
+    box-sizing: border-box; /* FONDAMENTALE: include padding e bordi nel calcolo del 100% */
+    padding: 10px; /* Spazio interno per non far toccare il testo ai bordi */
+    margin-bottom: 15px; /* Spazio tra un campo e l'altro */
+    border: 1px solid #424464; /* Bordo scuro per contrastare con lo sfondo chiaro */
+    border-radius: 4px;
+    background-color: #E6DCEB; /* Colore di sfondo per i campi */
+}
+
+/* 3. Stile base per il bottone di invio (opzionale) */
+form button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* 1. Allinea il logo a sinistra e il blocco testi a destra */
+.header-main-box {
+    display: flex;
+    align-items: center; /* Centra verticalmente il logo rispetto all'intero blocco di testo */
+    gap: 30px;           /* Spazio orizzontale tra il logo e i testi */
+}
+
+/* 2. Forza i testi a svilupparsi dall'alto verso il basso (colonna) */
+.testi-header {
+    display: flex;
+    flex-direction: column; 
+    gap: 5px;            /* Spazio verticale tra l'H1 e il motto */
+}
+
+/* 3. Pulizia dei margini predefiniti dei testi per evitare disallineamenti */
+.testi-header h1,
+.testi-header .motto {
+    margin: 0;
+}
+
+/* 4. Dimensioni del logo */
+.logo {
+    max-height: 10ch;    /* Regola l'altezza in base a quanto vuoi grandi i testi */
+    width: auto;
+}
+
+/* --- REGOLE PER MOBILE (Schermi sotto i 480px) --- */
+@media (max-width: 800px) {
+    
+    /* Forza il logo a stare SOPRA e i testi SOTTO, tutto centrato */
+    .header-main-box {
+        flex-direction: column; 
+        align-items: center;    /* Centra il logo e il blocco testi orizzontalmente */
+        text-align: center;     /* Centra il testo dentro all'H1 e al p */
+        gap: 12px;              /* Spazio verticale tra il logo e il titolo */
+    }
+
+    /* Rimpicciolisci il logo per non rubare troppo spazio verticale */
+    .logo {
+        max-height: 100px;
+        width: auto;
+    }
+
+    /* Gestione dei font per evitare che le parole si spezzino male */
+    .testi-header h1 {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    .testi-header .motto {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        margin-top: 5px;
+    }
+}
+
+nav {
+  margin-top: 20px;
+}
+
+a {
+  color: #424464;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.3s, border 0.3s; /* Transizione fluida per colore e bordo */
+}
+
+a:hover {
+  color: #736754;
+  border: 3px solid #736754;
+}
+
+button, input[type="reset"] {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  background-color: #E6DCEB;
+  color: #424464;
+  border: solid 2px #424464;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.gioco-di-ruolo, .home-link-box, .escape-room, .gioco-da-tavolo, .videogioco, .accessibile, details {
+  padding: 5px 15px;
+  border: 1px solid #424464;
+  border-radius: 10px;
+  background-color: #DBCFE2;
+  margin-bottom: 10px;
+}
+
+details {
+  cursor: pointer;
+}
+
+/* h3 {
+  padding-left: 10px;
+} */
+
+summary {
+  font-weight: bold;
+}
+
+.escape-room {
+  background-color: #CDDFE6;
+}
+
+.gioco-da-tavolo {
+  background-color: #EDD4AD;
+}
+
+.videogioco {
+  background-color: #DAE8D2;
+}
+
+.gioco-di-ruolo {
+  background-color: #F5D1D1;
+}
+
