@@ -1,7 +1,7 @@
 {
   "wanda": {
     "nome": "Wanda",
-    "descrizione": "Wanda – la cameriera!<br><br>Giù le mani o te le mozzo!<br>Wanda serviva hamburger e birra al Drive-in locale. L’apocalisse zombie non ha cambiato di molto la sua routine; anche adesso deve schivare palpeggiamenti, sfrecciare sui pattini e respingere con fermezza certe avance indesiderate.<br>La nuova motosega invece è un passo avanti.<br><br>Abilità di partenza: Ogni volta che ti muovi, puoi spostarti fino ad un massimo di due zone<br><br>Counter:<br>7 zombie livello giallo; <br>19 zombie livello arancione; <br>43 zombie livello rosso; ",
+    "descrizione": "Wanda – la cameriera!<br><br>Giù le mani o te le mozzo!<br>Wanda serviva hamburger e birra al Drive-in locale. L’apocalisse zombie non ha cambiato di molto la sua routine; anche adesso deve schivare palpeggiamenti, sfrecciare sui pattini e respingere con fermezza certe avance indesiderate.<br>La nuova motosega invece è un passo avanti.<br><br>Abilità di partenza: Ogni volta che ti muovi, puoi spostarti fino ad un massimo di due zone<br><br>Progressione dei livelli:<br>7 zombie livello giallo; <br>19 zombie livello arancione; <br>43 zombie livello rosso; ",
     "hpMax": 2,
     "levelCountErInfo": "Progressione dei livelli::<br>7 zombie livello giallo; <br>19 zombie livello arancione; <br>43 zombie livello rosso; ",
     "inventoryInfo": "ricorda: se hai in inventario 2 ferite, sei morta.",
@@ -44,7 +44,7 @@
   },
   "josh": {
     "nome": "Josh",
-    "descrizione": "JOSH – Il teppista<br><br>Non li voglio i tuoi soldi! Secondo te cosa dovrei farci?<br>Josh era un teppista di strada, cresciuto in povertà in un quartiere malfamato.<br>Vivere alla giornata era tutto ciò che poteva fare prima dell’arrivo degli zombie.<br>Ora che la legge non c’è più, e nessuno può dire che cosa deve fare, Josh ha scoperto che la sua esperienza di vita della strada è assai apprezzata dagli altri sopravvissuti.<br>Il rispetto ha più valore di tutto il denaro del mondo.<br><br>Abilità di partenza: Non spendi un’azione extra quando ti muovi attraverso una zona dove ci sono degli zombie<br><br>Counter:<br>7 zombie livello giallo; <br>19 zombie livello arancione; <br>43 zombie livello rosso; ",
+    "descrizione": "JOSH – Il teppista<br><br>Non li voglio i tuoi soldi! Secondo te cosa dovrei farci?<br>Josh era un teppista di strada, cresciuto in povertà in un quartiere malfamato.<br>Vivere alla giornata era tutto ciò che poteva fare prima dell’arrivo degli zombie.<br>Ora che la legge non c’è più, e nessuno può dire che cosa deve fare, Josh ha scoperto che la sua esperienza di vita della strada è assai apprezzata dagli altri sopravvissuti.<br>Il rispetto ha più valore di tutto il denaro del mondo.<br><br>Abilità di partenza: Non spendi un’azione extra quando ti muovi attraverso una zona dove ci sono degli zombie<br><br>Progressione dei livelli:<br>7 zombie livello giallo; <br>19 zombie livello arancione; <br>43 zombie livello rosso; ",
     "hpMax": 2,
     "levelCountErInfo": "Progressione dei livelli::<br>7 zombie livello giallo; <br>19 zombie livello arancione; <br>43 zombie livello rosso; ",
     "inventoryInfo": "ricorda: se hai in inventario 2 ferite, sei morto.",
@@ -87,7 +87,7 @@
   },
   "phil": {
     "nome": "Phil",
-    "descrizione": "PHIL – il poliziotto<br><BR>Vi copro io, non mettetevi sulla mia linea di tiro!<br>Via, via, via!<br>Phil è un poliziotto duro e puro, anche se le forze di polizia non esistono più. Indossa ancora la sua uniforme, porta la pistola d’ordinanza e ritiene suo dovere proteggere i civili; o almeno, quelli che sono ancora umani.<br>Fare il poliziotto gli permette di restare sano di mente, pur restando un po’ troppo rigido.<br><br>Abilità di partenza: Inizi la partita con una pistola<br><br>Counter:<br>7 zombie livello giallo; <br>19 zombie livello arancione; <br>43 zombie livello rosso; ",
+    "descrizione": "PHIL – il poliziotto<br><BR>Vi copro io, non mettetevi sulla mia linea di tiro!<br>Via, via, via!<br>Phil è un poliziotto duro e puro, anche se le forze di polizia non esistono più. Indossa ancora la sua uniforme, porta la pistola d’ordinanza e ritiene suo dovere proteggere i civili; o almeno, quelli che sono ancora umani.<br>Fare il poliziotto gli permette di restare sano di mente, pur restando un po’ troppo rigido.<br><br>Abilità di partenza: Inizi la partita con una pistola<br><br>Progressione dei livelli:<br>7 zombie livello giallo; <br>19 zombie livello arancione; <br>43 zombie livello rosso; ",
     "hpMax": 2,
     "levelCountErInfo": "Progressione dei livelli::<br>7 zombie livello giallo; <br>19 zombie livello arancione; <br>43 zombie livello rosso; ",
     "inventoryInfo": "ricorda: se hai in inventario 2 ferite, sei morto.",
@@ -130,7 +130,7 @@
   },
   "doug": {
     "nome": "Doug",
-    "descrizione": "Il lato positivo è: niente più rapporti di controllo-qualità…<br><br>Quattro ore fra andata e ritorno dall’ufficio, dodici ore al giorno, colleghi poco collaborativi e un capo sprezzante sono un ricordo del passato per Doug.<br>Certo, affrontare gli zombie è un po’ stressante, ma in tutta onestà è una variante piacevole rispetto alla trita routine quotidiana.<br>Una sub MG (mitraglietta) per mano è utile quando devi affrontare certi colleghi piantagrane ed ex capo ufficio… che tanto, secondo Doug, erano quasi sicuramente degli zombie già prima che tutto questo cominciasse.<br><br>Abilità di partenza: Quando esegui un’azione cercare, se peschi una carta con il simbolo detto “doppia”, puoi prendere subito una seconda carta uguale dal mazzo dell’equipaggiamento. Poi rimescola il mazzo.<br><br>Counter:<br>7 zombie livello giallo; <br>19 zombie livello arancione; <br>43 zombie livello rosso; ",
+    "descrizione": "Il lato positivo è: niente più rapporti di controllo-qualità…<br><br>Quattro ore fra andata e ritorno dall’ufficio, dodici ore al giorno, colleghi poco collaborativi e un capo sprezzante sono un ricordo del passato per Doug.<br>Certo, affrontare gli zombie è un po’ stressante, ma in tutta onestà è una variante piacevole rispetto alla trita routine quotidiana.<br>Una sub MG (mitraglietta) per mano è utile quando devi affrontare certi colleghi piantagrane ed ex capo ufficio… che tanto, secondo Doug, erano quasi sicuramente degli zombie già prima che tutto questo cominciasse.<br><br>Abilità di partenza: Quando esegui un’azione cercare, se peschi una carta con il simbolo detto “doppia”, puoi prendere subito una seconda carta uguale dal mazzo dell’equipaggiamento. Poi rimescola il mazzo.<br><br>Progressione dei livelli:<br>7 zombie livello giallo; <br>19 zombie livello arancione; <br>43 zombie livello rosso; ",
     "hpMax": 2,
     "levelCountErInfo": "Progressione dei livelli::<br>7 zombie livello giallo; <br>19 zombie livello arancione; <br>43 zombie livello rosso; ",
     "inventoryInfo": "ricorda: se hai in inventario 2 ferite, sei morto.",
@@ -173,7 +173,7 @@
   },
   "ned": {
     "nome": "Ned",
-    "descrizione": "NED – il pazzo<br><br>Aggiungi qualche goccia di candeggiante e… Bang! Eheh<br><br>Ned lo sapeva, lo sapeva che sarebbe successo. Questa è tutta colpa loro, ma nessuno gli aveva mai dato retta. Ora sì che si mangiano le mani.<br>Ned si è preparato per anni: ha accumulato cibo e armi, ha costruito un bunker, e tutto per sopravvivere a questo.<br>Purtroppo per lui, Ned ha perso la chiave del suo bunker, quindi, finchè non la trova, dovrà ricorrere a tutte le abilità di sopravvivenza che ha imparato.<br>E anche all’aiuto degli altri… Che iella!<br><br>Abilità di partenza: Hai un’azione in più di cercare gratuita<br><br>Counter:<br>7 zombie livello giallo; <br>19 zombie livello arancione; <br>43 zombie livello rosso; ",
+    "descrizione": "NED – il pazzo<br><br>Aggiungi qualche goccia di candeggiante e… Bang! Eheh<br><br>Ned lo sapeva, lo sapeva che sarebbe successo. Questa è tutta colpa loro, ma nessuno gli aveva mai dato retta. Ora sì che si mangiano le mani.<br>Ned si è preparato per anni: ha accumulato cibo e armi, ha costruito un bunker, e tutto per sopravvivere a questo.<br>Purtroppo per lui, Ned ha perso la chiave del suo bunker, quindi, finchè non la trova, dovrà ricorrere a tutte le abilità di sopravvivenza che ha imparato.<br>E anche all’aiuto degli altri… Che iella!<br><br>Abilità di partenza: Hai un’azione in più di cercare gratuita<br><br>Progressione dei livelli:<br>7 zombie livello giallo; <br>19 zombie livello arancione; <br>43 zombie livello rosso; ",
     "hpMax": 2,
     "levelCountErInfo": "Progressione dei livelli::<br>7 zombie livello giallo; <br>19 zombie livello arancione; <br>43 zombie livello rosso; ",
     "inventoryInfo": "ricorda: se hai in inventario 2 ferite, sei morto.",
@@ -216,7 +216,7 @@
   },
   "amy": {
     "nome": "Amy",
-    "descrizione": "AMY – la goth<br><br>No, non ve lo spiego perché dobbiamo saccheggiare la profumeria.<br><br>Amy era una ragazza goth che odiava tutto: dal consumismo privo di senso all’inutilità della vita quotidiana.<br>Il mondo che Amy disprezzava tanto ora è crollato, ma dal crollo è emersa la promessa di un nuovo inizio e di una vita più semplice.<br>Le battaglie disperate contro gli zombie hanno riacceso la voglia di vivere di Amy: ma ancora non si sente a suo agio senza un po’ di fondotinta bianco.<br><br>Abilità di partenza: Hai un’azione in più di movimento gratuita<br><br>Counter:<br>7 zombie livello giallo; <br>19 zombie livello arancione; <br>43 zombie livello rosso; ",
+    "descrizione": "AMY – la goth<br><br>No, non ve lo spiego perché dobbiamo saccheggiare la profumeria.<br><br>Amy era una ragazza goth che odiava tutto: dal consumismo privo di senso all’inutilità della vita quotidiana.<br>Il mondo che Amy disprezzava tanto ora è crollato, ma dal crollo è emersa la promessa di un nuovo inizio e di una vita più semplice.<br>Le battaglie disperate contro gli zombie hanno riacceso la voglia di vivere di Amy: ma ancora non si sente a suo agio senza un po’ di fondotinta bianco.<br><br>Abilità di partenza: Hai un’azione in più di movimento gratuita<br><br>Progressione dei livelli:<br>7 zombie livello giallo; <br>19 zombie livello arancione; <br>43 zombie livello rosso; ",
     "hpMax": 2,
     "levelCountErInfo": "Progressione dei livelli::<br>7 zombie livello giallo; <br>19 zombie livello arancione; <br>43 zombie livello rosso; ",
     "inventoryInfo": "ricorda: se hai in inventario 2 ferite, sei morta.",
