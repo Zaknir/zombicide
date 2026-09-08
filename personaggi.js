@@ -2,7 +2,7 @@
 // DATI CENTRALIZZATI DEI PERSONAGGI (Zombieside)
 // ==========================================
 // I testi (nome, descrizione, abilità) vivono in un unico file: personaggi.json.
-// Sia la scheda "overview" (anteprima) sia la scheda "card" (gioco) leggono da qui,
+// Sia la scheda "overview" (anteprima) sia la scheda "card" (gioco) leggono da qui.
 
 let personaggiCache = null;
 
@@ -31,7 +31,7 @@ class PersonaggioOverview extends HTMLElement {
 
     this.innerHTML = `
     <section>
-      <h1>${p.nome}, Anteprima</h1>
+      <h1>${p.nome}, anteprima</h1>
     </section>
     <section>
       <p>${p.descrizione}</p>
@@ -71,8 +71,8 @@ class PersonaggioCard extends HTMLElement {
     let hpAttuali = parseInt(localStorage.getItem(chiaveHp), 10);
     if (isNaN(hpAttuali)) hpAttuali = 0;
 
-    // zombie uccisi salvati in localStorage, così restano invariati ricaricando la pagina
-    const chiaveZombie = `zombieside_killeD_zombie_${this.dataset.id}`;
+    // Zombie uccisi salvati in localStorage, così restano invariati ricaricando la pagina
+    const chiaveZombie = `zombieside_killed_zombie_${this.dataset.id}`;
     let zombieAttuali = parseInt(localStorage.getItem(chiaveZombie), 10);
     if (isNaN(zombieAttuali)) zombieAttuali = 0;
 
@@ -161,7 +161,7 @@ class PersonaggioCard extends HTMLElement {
       </section>
 
       <section>
-        <div class="game-area" role="region" aria-label="area di gioco">
+        <div class="game-area" role="region" aria-label="Area di gioco">
           <div class="status-summary" aria-live="polite">
               <p id="livello-riga">Livello attuale: ${livelloCorrente()}</p>
               <p id="abilita-riga">Abilità attuali: ${abilitaRaggiunte().length}</p>
@@ -187,33 +187,33 @@ class PersonaggioCard extends HTMLElement {
           <div class="inventory-area" role="region">
             <form>
                 <fieldset>
-                <legend>inventario</legend>
-                <div iD="inventory-tip"> <p>segna qui gli oggetti che hai in mano e nello zaino, ${p.inventoryInfo}</p> </div>
-                    <label for="lHand">mano sinistra:</label>
-                    <input type="text" id="lHand" name="lhan" value="${inventario.lHand ?? ''}" aria-describedby=inventory-tip>
-                    <label for="rHand">mano destra:</label>
-                    <input type="text" id="rHand" name="rhan" value="${inventario.rHand ?? ''}" aria-describedby=inventory-tip>
+                <legend>Inventario</legend>
+                <div id="inventory-tip"> <p>Segna qui gli oggetti che hai in mano e nello zaino, ${p.inventoryInfo}</p> </div>
+                    <label for="lHand">Mano sinistra:</label>
+                    <input type="text" id="lHand" name="lhand" value="${inventario.lHand ?? ''}" aria-describedby="inventory-tip">
+                    <label for="rHand">Mano destra:</label>
+                    <input type="text" id="rHand" name="rhand" value="${inventario.rHand ?? ''}" aria-describedby="inventory-tip">
                     <br>
-                    <label for="backPack1">zaino: 1:</label>
-                    <input type="text" id="backPack1" name="backpack1" value="${inventario.backPack1 ?? ''}" aria-describedby=inventory-tip><br>
-                    <label for="backPack2">zaino: 2:</label>
-                    <input type="text" id="backPack2" name="backpack2" value="${inventario.backPack2 ?? ''}" aria-describedby=inventory-tip><br>
-                    <label for="backPack3">zaino: 3:</label>
-                    <input type="text" id="backPack3" name="backpack3" value="${inventario.backPack3 ?? ''}" aria-describedby=inventory-tip><br>
+                    <label for="backPack1">Zaino 1:</label>
+                    <input type="text" id="backPack1" name="backpack1" value="${inventario.backPack1 ?? ''}" aria-describedby="inventory-tip"><br>
+                    <label for="backPack2">Zaino 2:</label>
+                    <input type="text" id="backPack2" name="backpack2" value="${inventario.backPack2 ?? ''}" aria-describedby="inventory-tip"><br>
+                    <label for="backPack3">Zaino 3:</label>
+                    <input type="text" id="backPack3" name="backpack3" value="${inventario.backPack3 ?? ''}" aria-describedby="inventory-tip"><br>
                 </fieldset>
             </form>
           </div>
 
-          <p>${p.levelCountErInfo}</p>
+          <p>${p.levelCounterInfo}</p>
           <br>
         
-          <!-- <button type="button" data-azione-reset-all="reset" aria-label="resetta tutti i dati">reset</button> -->
-          <input type="reset" data-azione-reset-all="reset" aria-label="resetta tutti i dati">
+          <!-- <button type="button" data-azione-reset-all="reset" aria-label="Resetta tutti i dati">Reset</button> -->
+          <input type="reset" data-azione-reset-all="reset" aria-label="Resetta tutti i dati">
         </div>
       </section>
 
       <section>
-        <h2>livelli e abilità:</h2>
+        <h2>Livelli e abilità:</h2>
 
         <div id="dettaglio-livelli">${renderDettaglioLivelli()}</div>
       </section>
@@ -222,12 +222,12 @@ class PersonaggioCard extends HTMLElement {
     // TODO: commentato perché non più richiesto nella V2
     // const rigaHp = this.querySelector('#hp-riga');
     // this.querySelectorAll('[data-azione-hp]').forEach(hpButton => {
-    //   hpButton.addEventListener('click', () => {
-    //     if (hpButton.dataset.azioneHp === 'piu' && hpAttuali < p.hpMax) hpAttuali++;
-    //     if (hpButton.dataset.azioneHp === 'meno' && hpAttuali > 0) hpAttuali--;
-    //     rigaHp.textContent = `Punti ferita: ${hpAttuali} / ${p.hpMax}`;
-    //     localStorage.setItem(chiaveHp, hpAttuali);
-    //   });
+    //    hpButton.addEventListener('click', () => {
+    //      if (hpButton.dataset.azioneHp === 'piu' && hpAttuali < p.hpMax) hpAttuali++;
+    //      if (hpButton.dataset.azioneHp === 'meno' && hpAttuali > 0) hpAttuali--;
+    //      rigaHp.textContent = `Punti ferita: ${hpAttuali} / ${p.hpMax}`;
+    //      localStorage.setItem(chiaveHp, hpAttuali);
+    //    });
     // });
 
     const rigaZombie = this.querySelector('#zombie-riga');
@@ -291,7 +291,7 @@ class PersonaggioCard extends HTMLElement {
 
     this.querySelectorAll('[data-azione-reset-all]').forEach(resetButton => {
       resetButton.addEventListener('click', () => {
-        const confermato = window.confirm('Vuoi veramente azzerare tutti i contatori(punti ferita, zombie uccisi e livelli raggiunti)?');
+        const confermato = window.confirm('Vuoi veramente azzerare tutti i contatori (punti ferita, zombie uccisi e livelli raggiunti)?');
         if (!confermato) return;
 
         // TODO: commentato perché non più richiesto in V2
