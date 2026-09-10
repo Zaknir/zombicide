@@ -1,5 +1,5 @@
 // ==========================================
-// DATI CENTRALIZZATI DEI PERSONAGGI (Zombieside)
+// DATI CENTRALIZZATI DELLE SOPRAVVISSUTE (Zombieside)
 // ==========================================
 // I testi (nome, descrizione, abilità) vivono in un unico file: personaggi.json.
 // Sia la scheda "overview" (anteprima) sia la scheda "card" (gioco) leggono da qui.
@@ -25,7 +25,7 @@ class PersonaggioOverview extends HTMLElement {
     const personaggi = await caricaPersonaggi();
     const p = personaggi[this.dataset.id];
     if (!p) {
-      this.innerHTML = `<p>Personaggio "${this.dataset.id}" non trovato.</p>`;
+      this.innerHTML = `<p>Sopravvissuta "${this.dataset.id}" non trovata.</p>`;
       return;
     }
 
@@ -62,7 +62,7 @@ class PersonaggioCard extends HTMLElement {
     const personaggi = await caricaPersonaggi();
     const p = personaggi[this.dataset.id];
     if (!p) {
-      this.innerHTML = `<p>Personaggio "${this.dataset.id}" non trovato.</p>`;
+      this.innerHTML = `<p>Sopravvissuta "${this.dataset.id}" non trovata.</p>`;
       return;
     }
 
@@ -71,12 +71,12 @@ class PersonaggioCard extends HTMLElement {
     let hpAttuali = parseInt(localStorage.getItem(chiaveHp), 10);
     if (isNaN(hpAttuali)) hpAttuali = 0;
 
-    // Zombie uccisi salvati in localStorage, così restano invariati ricaricando la pagina
+    // Creature zombie eliminate salvate in localStorage, così restano invariate ricaricando la pagina
     const chiaveZombie = `zombieside_killed_zombie_${this.dataset.id}`;
     let zombieAttuali = parseInt(localStorage.getItem(chiaveZombie), 10);
     if (isNaN(zombieAttuali)) zombieAttuali = 0;
 
-    // Scelte dell'utente per i livelli con più abilità tra cui scegliere (sceltaMultipla),
+    // Scelte della giocatrice per i livelli con più abilità tra cui scegliere (sceltaMultipla),
     // salvate in localStorage così restano invariate ricaricando la pagina
     const chiaveScelte = `zombieside_scelte_${this.dataset.id}`;
     let scelteAbilita = {};
@@ -96,8 +96,8 @@ class PersonaggioCard extends HTMLElement {
       inventario = {};
     }
 
-    // Il livello attuale è determinato dal numero di zombie uccisi: si passa al
-    // livello quando zombieAttuali raggiunge il suo "zombieCounter".
+    // Il livello attuale è determinato dal numero di creature zombie eliminate: si passa al
+    // livello successivo quando zombieAttuali raggiunge il suo "zombieCounter".
     const livelloAttualeObj = () => {
       let corrente = null;
       p.livelli.forEach(l => {
@@ -110,7 +110,7 @@ class PersonaggioCard extends HTMLElement {
       return corrente ? corrente.livello : 'nessuno';
     };
 
-    // Restituisce il livello raggiunto per il quale l'utente deve ancora scegliere
+    // Restituisce il livello raggiunto per il quale la giocatrice deve ancora scegliere
     // un'abilità (sceltaMultipla), oppure null se non c'è nessuna scelta in sospeso.
     const livelloInAttesaDiScelta = () => {
       const attuale = livelloAttualeObj();
@@ -119,7 +119,7 @@ class PersonaggioCard extends HTMLElement {
     };
 
     // Elenco delle abilità dei livelli già raggiunti: per i livelli con
-    // sceltaMultipla viene inclusa solo l'abilità scelta dall'utente (se presente).
+    // sceltaMultipla viene inclusa solo l'abilità scelta dalla giocatrice (se presente).
     const abilitaRaggiunte = () => {
       const raccolte = [];
       p.livelli.forEach(l => {
@@ -170,7 +170,7 @@ class PersonaggioCard extends HTMLElement {
               </div>
               <!-- TODO: commentato perché non più richiesto in V2 -->
               <!-- <p id="hp-riga">Ferite: ${hpAttuali} / ${p.hpMax}</p> -->
-              <p id="zombie-riga">Zombie uccisi: ${zombieAttuali}</p>
+              <p id="zombie-riga">Creature zombie eliminate: ${zombieAttuali}</p>
           </div>
           <p id="avviso-scelta" aria-live="assertive"></p>
               
@@ -180,8 +180,8 @@ class PersonaggioCard extends HTMLElement {
               <!-- <button type="button" data-azione-hp="piu" aria-label="Aggiungi una ferita">+ 1 ferita</button> -->
           <!-- </div> -->
           <div class="zombie-counter-controls">
-              <button type="button" data-azione-zombie="meno" aria-label="Rimuovi zombie">− 1 zombie</button>
-              <button type="button" data-azione-zombie="piu" aria-label="Aggiungi zombie">+ 1 zombie</button>
+              <button type="button" data-azione-zombie="meno" aria-label="Rimuovi creatura zombie">− 1 zombie</button>
+              <button type="button" data-azione-zombie="piu" aria-label="Aggiungi creatura zombie">+ 1 zombie</button>
           </div>
         
           <div class="inventory-area" role="region">
@@ -245,7 +245,7 @@ class PersonaggioCard extends HTMLElement {
     };
 
     // Finché un livello raggiunto a sceltaMultipla non ha ancora un'abilità scelta,
-    // impedisce di avanzare (disabilita "+ 1 zombie") e avvisa via screen-reader.
+    // impedisce di avanzare (disabilita "+ 1 creatura") e avvisa via screen-reader.
     const aggiornaStatoScelta = () => {
       const inAttesa = livelloInAttesaDiScelta();
       zombiePiuButton.disabled = !!inAttesa;
@@ -255,7 +255,7 @@ class PersonaggioCard extends HTMLElement {
     };
     aggiornaStatoScelta();
 
-    // Delegazione: quando l'utente sceglie un'abilità con un pulsante radio,
+    // Delegazione: quando la giocatrice sceglie un'abilità con un pulsante radio,
     // la scelta viene salvata e la lista delle abilità raggiunte aggiornata.
     dettaglioLivelli.addEventListener('change', e => {
       const input = e.target.closest('input[type="radio"][data-livello]');
@@ -280,7 +280,7 @@ class PersonaggioCard extends HTMLElement {
       zombieButton.addEventListener('click', () => {
         if (zombieButton.dataset.azioneZombie === 'piu') zombieAttuali++;
         if (zombieButton.dataset.azioneZombie === 'meno' && zombieAttuali > 0) zombieAttuali--;
-        rigaZombie.textContent = `Zombie uccisi: ${zombieAttuali}`;
+        rigaZombie.textContent = `Creature zombie eliminate: ${zombieAttuali}`;
         rigaLivello.textContent = `Livello attuale: ${livelloCorrente()}`;
         dettaglioLivelli.innerHTML = renderDettaglioLivelli();
         aggiornaAbilitaRaggiunte();
@@ -291,7 +291,7 @@ class PersonaggioCard extends HTMLElement {
 
     this.querySelectorAll('[data-azione-reset-all]').forEach(resetButton => {
       resetButton.addEventListener('click', () => {
-        const confermato = window.confirm('Vuoi veramente azzerare tutti i contatori (punti ferita, zombie uccisi e livelli raggiunti)?');
+        const confermato = window.confirm('Vuoi veramente azzerare tutti i contatori (punti ferita, creature zombie eliminate e livelli raggiunti)?');
         if (!confermato) return;
 
         // TODO: commentato perché non più richiesto in V2
@@ -305,7 +305,7 @@ class PersonaggioCard extends HTMLElement {
 
         // TODO: commentato perché non più richiesto in V2
         // rigaHp.textContent = `Punti ferita: ${hpAttuali} / ${p.hpMax}`;
-        rigaZombie.textContent = `Zombie uccisi: ${zombieAttuali}`;
+        rigaZombie.textContent = `Creature zombie eliminate: ${zombieAttuali}`;
         rigaLivello.textContent = `Livello attuale: ${livelloCorrente()}`;
         dettaglioLivelli.innerHTML = renderDettaglioLivelli();
         aggiornaAbilitaRaggiunte();
